@@ -25,7 +25,7 @@ export default function FeaturedCategories() {
     },
     {
       name: "Collares",
-      image: "/Collar.jpg",
+      image: "/images/Collar.jpg",
       description:
         "Nuestros collares combinan elegancia y tendencia para iluminar tu look con un toque de distinción.",
     },
