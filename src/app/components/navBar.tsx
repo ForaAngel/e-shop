@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="bg-white border-b border-gray-200"
+      className="bg-white border-b border-gray-200 z-50 relative"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -38,7 +38,7 @@ export default function Navbar() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Link
-                    href={`/${item.toLowerCase().replace(" ", "-")}`}
+                    href={"#"}
                     className="text-sm font-medium text-gray-900 hover:text-gray-600 px-3 py-2 inline-flex items-center h-full"
                   >
                     {item}
@@ -51,14 +51,14 @@ export default function Navbar() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-md text-gray-600 hover:text-gray-900 "
+              className="p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none "
             >
               <Search className="h-5 w-5" />
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="ml-4 p-2 rounded-md text-gray-600 hover:text-gray-900 "
+              className="ml-4 p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none "
             >
               <ShoppingBag className="h-5 w-5" />
             </motion.button>
@@ -68,7 +68,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none "
+              className="p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -79,7 +79,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {/* Menú móvil */}
       {isMenuOpen && (
         <motion.div
           className="sm:hidden"
